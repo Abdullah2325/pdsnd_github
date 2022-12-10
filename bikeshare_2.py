@@ -217,8 +217,8 @@ def display_data(df):
         if row_table == "yes":
             print(df.head())
         elif row_table not in Answer:
-            print("Please check your input.")
-            print("Input does not seem to match any of the accepted responses.")
+            print("Please check your input.\nInput does not seem to match any of the accepted responses.")
+        
             
 
     
