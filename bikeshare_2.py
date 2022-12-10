@@ -28,7 +28,8 @@ def get_filters():
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-            city = input('Enter City name:\n>').lower()
+
+            city = input('Please enter City name from the following list:\n1-chicago\n2-new york city\n3-washington\n>').lower()
             try:
                 if city in CITIES:
                     break
@@ -139,9 +140,9 @@ def station_stats(df):
 
     # display most frequent combination of start station and end station trip
     df['combination_of_stations'] = "From station>> " + df['Start Station']+ " \nTo station>> "+df['End Station']
-    popular_combination_of_stations = df['combination_of_stations'].mode()[0]
-    
-    print("Most common Trip:\n" , popular_combination_of_stations)
+
+    popular_Trip = df['combination_of_stations'].mode()[0]
+    print("Most common Trip:\n" , popular_Trip)
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -217,8 +218,9 @@ def display_data(df):
         if row_table == "yes":
             print(df.head())
         elif row_table not in Answer:
-            print("Please check your input.")
-            print("Input does not seem to match any of the accepted responses.")
+
+
+            print("Please check your input.\nInput does not seem to match any of the accepted responses.")
             
 
     
